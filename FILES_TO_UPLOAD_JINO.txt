@@ -1,0 +1,41 @@
+Список файлов и папок для загрузки на Jino.ru
+=============================================
+
+✅ ЗАГРУЗИТЬ:
+- app/                    (вся папка)
+- components/             (вся папка)
+- data/                   (вся папка)
+- public/                 (вся папка)
+- scripts/                (вся папка, опционально)
+- package.json
+- package-lock.json
+- tsconfig.json
+- next.config.ts
+- postcss.config.mjs
+- eslint.config.mjs
+- .gitignore
+- .jino.config
+
+❌ НЕ ЗАГРУЗЖАТЬ:
+- node_modules/          (установится через npm install)
+- .next/                 (создастся при npm run build)
+- .git/                  (не нужен на сервере)
+- .env.local             (используйте переменные окружения в панели Jino)
+- *.log                  (логи)
+
+📋 ПОРЯДОК ДЕЙСТВИЙ:
+
+1. Создайте архив со всеми файлами (кроме исключенных)
+2. Загрузите архив на Jino через FTP/SFTP или файловый менеджер
+3. Распакуйте архив на сервере
+4. В терминале Jino выполните:
+   npm install --production
+   npm run build
+   npm start
+
+5. Настройте переменные окружения в панели Jino
+6. Настройте домен и SSL
+
+Готово! 🚀
+
+

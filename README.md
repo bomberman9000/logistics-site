@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# СИНЕРГИЯ+ - Сайт логистической компании
 
-## Getting Started
+Современный сайт для транспортной компании на Next.js 14+ с TypeScript, Tailwind CSS и интеграцией с Telegram.
 
-First, run the development server:
+## 🚀 Быстрый старт
+
+### Установка зависимостей
+
+```bash
+npm install
+```
+
+### Настройка переменных окружения
+
+Создайте файл `.env.local` на основе `.env.local.example`:
+
+```bash
+cp .env.local.example .env.local
+```
+
+Заполните переменные:
+- `TELEGRAM_BOT_TOKEN` - токен бота от @BotFather
+- `TELEGRAM_CHAT_ID` - ваш chat_id (узнайте через @userinfobot)
+
+### Запуск dev-сервера
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте [http://localhost:3000](http://localhost:3000) в браузере.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Структура проекта
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+logistics-site/
+├── app/                    # App Router (Next.js 14+)
+│   ├── api/               # API routes
+│   │   └── lead/          # Отправка заявок в Telegram
+│   ├── routes/            # Страницы направлений
+│   │   └── [slug]/       # Динамические страницы направлений
+│   ├── services/          # Страница услуг
+│   ├── about/             # О компании
+│   ├── contacts/          # Контакты
+│   ├── layout.tsx         # Корневой layout
+│   └── page.tsx           # Главная страница
+├── components/            # React компоненты
+│   ├── Header.tsx         # Шапка сайта
+│   ├── Footer.tsx         # Подвал
+│   ├── Hero.tsx           # Главный баннер
+│   ├── Benefits.tsx       # Преимущества
+│   ├── ServicesGrid.tsx   # Сетка услуг
+│   ├── HowItWorks.tsx     # Как работаем
+│   ├── FAQ.tsx            # Частые вопросы
+│   ├── LeadForm.tsx       # Форма заявки
+│   └── CallToAction.tsx   # Призыв к действию
+└── data/                  # Данные
+    └── routes.ts          # Данные направлений
+```
 
-## Learn More
+## 🛣️ Роуты
 
-To learn more about Next.js, take a look at the following resources:
+- `/` - Главная страница
+- `/services` - Услуги
+- `/routes` - Список направлений
+- `/routes/[slug]` - Страница направления
+- `/about` - О компании
+- `/contacts` - Контакты
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 Настройка Telegram бота
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Создайте бота через [@BotFather](https://t.me/BotFather)
+2. Получите токен бота
+3. Узнайте свой chat_id через [@userinfobot](https://t.me/userinfobot)
+4. Добавьте переменные в `.env.local`
 
-## Deploy on Vercel
+## 🎨 Технологии
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Next.js 14+** - React фреймворк с App Router
+- **TypeScript** - Типизация
+- **Tailwind CSS** - Стилизация
+- **Telegram Bot API** - Отправка заявок
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📦 Деплой
+
+### Vercel (рекомендуется)
+
+1. Подключите репозиторий к Vercel
+2. Добавьте переменные окружения в настройках проекта
+3. Деплой произойдет автоматически
+
+### Другие платформы
+
+Проект можно задеплоить на любую платформу, поддерживающую Next.js:
+- Netlify
+- Railway
+- DigitalOcean App Platform
+
+## 🔧 Разработка
+
+### Добавление нового направления
+
+Отредактируйте файл `data/routes.ts` и добавьте новый объект в массив `routes`.
+
+### Изменение компонентов
+
+Все компоненты находятся в папке `components/`. Они переиспользуемые и легко настраиваются.
+
+## 📞 Контакты
+
+- Телефон: +7 (927) 899-66-62
+- Telegram: @sinergia_plus
+- WhatsApp: +7 (927) 899-66-62
+
+## 📄 Лицензия
+
+© 2024 СИНЕРГИЯ+. Все права защищены.

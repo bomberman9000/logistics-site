@@ -1,0 +1,9 @@
+# Файлы, которые не нужно загружать на Vercel
+node_modules
+.next
+.git
+.env.local
+*.log
+.DS_Store
+
+
