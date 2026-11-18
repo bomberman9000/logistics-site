@@ -1,6 +1,6 @@
 # СИНЕРГИЯ+ - Сайт логистической компании
 
-Современный сайт для транспортной компании на Next.js 14+ с TypeScript, Tailwind CSS и интеграцией с Telegram.
+Современный сайт для транспортной компании на Next.js 16 (согласно package.json) с TypeScript, Tailwind CSS и интеграцией с Telegram.
 
 ## 🚀 Быстрый старт
 
@@ -76,7 +76,7 @@ logistics-site/
 
 ## 🎨 Технологии
 
-- **Next.js 14+** - React фреймворк с App Router
+- **Next.js 16** - React фреймворк с App Router
 - **TypeScript** - Типизация
 - **Tailwind CSS** - Стилизация
 - **Telegram Bot API** - Отправка заявок
